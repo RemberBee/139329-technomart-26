@@ -1,0 +1,105 @@
+/* Основные стили сайта */
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #ffffff;
+
+  background-color: #ffffff;
+  background-position: top center;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 23px;
+  color: #ee3643;
+}
+
+/* Стили шапки сайта */
+.header {
+  background-color: #f4f7f9;
+}
+
+.top-menu {
+  line-height: 18px;
+
+  background-color: #293449;
+}
+
+.top-menu a {
+  color: #ffffff;
+}
+
+.top-menu .bookmarks:hover,
+.top-menu .basket:hover,
+input[search]:hover {
+  background-color: #212a3a;
+}
+
+.top-menu .bookmarks:focus,
+.top-menu .basket:focus {
+  background-color: #161d29;
+}
+
+.checkout {
+  background-color: #63a63e
+}
+
+.top-menu .checkout:hover {
+  background-color: #5fbb2d;
+}
+
+.top-menu .checkout:focus {
+  color: rgba(255, 255, 255, 0.5);
+
+  background-color: #518534;
+}
+
+.phone-number {
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+}
+
+.address {
+  font-size: 14px;
+  color: #32425c;
+  font-style: normal;
+}
+
+.sign-in {
+  color: #000000;
+}
+
+.sign-in a {
+  color: #000000;
+}
+.registration {
+  color: #000000;
+}
+
+.registration a {
+  color: #000000;
+}
+
+.main-navigation {
+  line-height: 17px;
+
+
+  background-color: #293449;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+/* Стили подвала сайта */

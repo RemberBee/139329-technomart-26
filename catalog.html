@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-  <meta charset="utf-8">
-  <title>Каталог товаров</title>
-  <meta name="description" content="Интернет-магазин строительных материалов и инструментов для ремонта">
+    <meta charset="utf-8">
+    <title>Каталог товаров</title>
+    <meta name="description" content="Интернет-магазин строительных материалов и инструментов для ремонта">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -12,15 +16,15 @@
           <p class="logo">Техномарт</p>
         </a>
         <input type="search" name="search" value="Поиск:">
-        <a href="">
-          <p class="bookmarks">Закладки</p>
+        <a href="" class="bookmarks">
+          <span>Закладки:</span>
           <span>0</span>
         </a>
-        <a href="">
-          <p class="basket">Корзина</p>
+        <a href="" class="basket">
+          <span>Корзина:</span>
           <span>10</span>
         </a>
-        <a href="">Оформить заказ</a>
+        <a href="" class="checkout">Оформить заказ</a>
       </section>
       <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <p class="address">
@@ -40,8 +44,8 @@
           </li>
         </ul>
       </div>
-      <nav class="navigation">
-        <ul>
+      <nav class="main-navigation">
+        <ul class="site-navigation">
           <li><a href="index.html">Главная</a></li>
           <li><a href="">Компания</a></li>
           <li>Каталог</li>
