@@ -48,34 +48,34 @@
           <div class="promo-block-item materials">
             <span class="mark mark-new">new</span>
             <h3>Материалы</h3>
-			 <a href="" class="promo-block-button">НА ЛЮБОЙ ВКУС</a>
-		  </div>
+			      <a href="" class="promo-block-button">НА ЛЮБОЙ ВКУС</a>
+		      </div>
           <div class="promo-block-item instruments">
             <span class="mark mark-new hidden">new</span>
-          	<h3>Инструменты</h3>
-			<a href="" class="promo-block-button">НА ВСЕ СЛУЧАИ</a>
+          	<h3>Инструмент</h3>
+			      <a href="" class="promo-block-button">НА ВСЕ СЛУЧАИ</a>
           </div>
           <div class="promo-block-item slider">
           	<h3>ДРЕЛИ</h3>
           	<p>Соседям на радость</p>
-			<a href="catalog.html" class="red-button">ОТКРЫТЬ КАТАЛОГ</a>
+			      <a href="catalog.html" class="red-button">ОТКРЫТЬ КАТАЛОГ</a>
           </div>
         </div>
         <div class="vertical-promo-block">
-		  <div class="promo-block-item technics">
+		      <div class="promo-block-item technics">
           	<span class="mark mark-new hidden">new</span>
           	<h3>Техника</h3>
-			<a href="" class="promo-block-button">ДЛЯ СТРОЙКИ</a>
+			      <a href="" class="promo-block-button">ДЛЯ СТРОЙКИ</a>
           </div>
           <div class="promo-block-item sale">
           	<span class="mark mark-new hidden">new</span>
           	<h3>Скидки 50%</h3>
-			<a href="" class="promo-block-button">НА 350 ТОВАРОВ</a>
+			      <a href="" class="promo-block-button">НА 350 ТОВАРОВ</a>
           </div>
           <div class="promo-block-item delivery">
           	<span class="mark mark-new hidden">new</span>
           	<h3>Доставка</h3>
-			<a href="" class="promo-block-button">БЕСПЛАТНО</a>
+			      <a href="" class="promo-block-button">БЕСПЛАТНО</a>
           </div>
         </div>
       </section>
@@ -180,32 +180,41 @@
         </ul>
       </section>
       <section class="service">
-		<div class="service-block">
+		    <div class="service-block">
       	  <h2>Сервисы</h2>
           <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
-          <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными</p>
+          <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         </div>
-        <ul class="service-list">
-          <li class="service-list-delivery">
-            <h3>Доставка</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж</p>
-            <img src="img/delivery.png" width="468" height="261" alt="">
-          </li>
-          <li class="service-list-guarantee hidden">
-            <h3>Гарантия</h3>
-            <p>Если купленный у нас товар поломается или заискрит,
+        <div class="service-container">
+          <input class="hidden" type="radio" id="delivery" name="toggle" checked>
+          <input class="hidden" type="radio" id="guarantee" name="toggle">
+          <input class="hidden" type="radio" id="credit" name="toggle">
+          <div class="service-controls">
+            <label class="service-controls-item" for="delivery">Доставка</label>
+            <label class="service-controls-item" for="guarantee">Гарантия</label>
+            <label class="service-controls-item" for="credit">Кредит</label>
+          </div>
+          <ul class="service-list">
+            <li class="service-list-item service-list-item-delivery">
+              <h3>Доставка</h3>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!</p>
+              <p>Ведь мы неплохо заработаем, поднимая его на ваш этаж</p>
+            </li>
+            <li class="service-list-item service-list-item-guarantee">
+              <h3>Гарантия</h3>
+              <p>Если купленный у нас товар поломается или заискрит,
                а также в случае пожара, спровоцированного его возгоранием,
-               вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
-               Дом уж восстановите как-нибудь сами.</p>
-            <img src="img/guarantee.png" width="389" height="283" alt="">
-          </li>
-          <li class="service-list-credit hidden">
-            <h3>Кредит</h3>
-            <p>Залезть в долговую яму стало проще!</p>
-            <p>Кредитные консультанты придут вам на помощь.</p>
-            <img src="img/credit.png" width="465" height="285" alt="">
-          </li>
-        </ul>
+               вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.</p>
+               <p>Дом уж восстановите как-нибудь сами.</p>
+            </li>
+            <li class="service-list-item">
+              <h3>Кредит</h3>
+              <p>Залезть в долговую яму стало проще!</p>
+              <p>Кредитные консультанты придут вам на помощь.</p>
+              <a href="" class="red-button red-button-service">Отправить заявку</a>
+            </li>
+          </ul>
+        </div>
       </section>
   	  <section class="company">
   	  	<h2 class="hidden">О компании</h2>
@@ -242,7 +251,7 @@
   	<footer class="footer">
   	  <section class="top-footer">
   	    <span class="logo">
-         <img src="img/logo-name.svg" width="109" height="19" alt="Логотоп">
+         <img src="img/logo-name.svg" width="138" height="23" alt="Логотоп">
         </span>
 		    <ul class="link-items">
 		      <li class="link-item">
