@@ -1878,10 +1878,11 @@ a.current-sort {
 .add-cart {
   display: none;
 
-  top: 120px;
+  top: 50%;
   left: 50%;
 
   width: 620px;
+  margin-top: -150px;
   margin-left: -315px;
 }
 
@@ -1936,6 +1937,16 @@ a.current-sort {
   height: 112px;
 
   background-color: #f1f1f1;
+}
+
+.white-button {
+  color: #000;
+  background-color: #fff;
+}
+
+.white-button:hover {
+  color: #fff;
+  background-color: #32425C;
 }
 
 .button-container a {
@@ -1994,6 +2005,16 @@ a.current-sort {
   margin-right: 0px;
 }
 
+.ask-question input:hover,
+.ask-question textarea:hover {
+  border: solid 2px #b5b5b5;
+}
+
+.ask-question input:focus,
+.ask-question textarea:focus {
+  border: solid 2px #ee3643;
+}
+
 .ask-question textarea {
   min-width: 330px;
   max-width: 438px;
@@ -2031,3 +2052,4 @@ a.current-sort {
   top: 10px;
   background-color: #EFEAE4;
 }
+
