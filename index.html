@@ -85,7 +85,7 @@
           <a href="" class="red-button">Все популярные товары</a>
       	</div>
         <ul class="catalog-items">
-          <li class="catalog-item">
+          <li class="catalog-item catalog-item-main">
             <span class="mark mark-new hidden">new</span>
             <div class="catalog-button">
               <a href="" class="item-buy">Купить</a>
@@ -96,7 +96,7 @@
             <s class="old-price">32500 Р.</s>
             <span class="item-price">25500 Р.</span>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item catalog-item-main">
             <span class="mark mark-new hidden">new</span>
             <div class="catalog-button">
               <a href="" class="item-buy">Купить</a>
@@ -107,7 +107,7 @@
             <s class="old-price">22500 Р.</s>
             <span class="item-price">15500 Р.</span>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item catalog-item-main">
             <span class="mark mark-new hidden">new</span>
             <div class="catalog-button">
               <a href="" class="item-buy">Купить</a>
@@ -118,7 +118,7 @@
             <s class="old-price">30500 Р.</s>
             <span class="item-price">25500 Р.</span>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item catalog-item-main">
             <span class="mark mark-new">new</span>
             <div class="catalog-button">
               <a href="" class="item-buy">Купить</a>
@@ -318,23 +318,36 @@
       </div>
   	</footer>
     <!-- скрытые элементы -->
-    <section class="map" hidden>
-      <h2>Как до нас добраться</h2>
+    <section class="modal map">
+      <h2 class="hidden">Как до нас добраться</h2>
+      <button type="button" class="close-window">
+        <span class="hidden">Закрыть</span>
+      </button>
       <img src="img/big-map.jpg" width="940" height="446" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
-      <button type="button" class="close">Закрыть</button>
     </section>
-    <section class="letter" hidden>
-      <h2>Задать вопрос</h2>
-      <form>
-        <label for="user-name">Ваше имя:</label>
-        <input id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
-        <label for="user-email">Ваше e-mail:</label>
-        <input id="user-email" type="text" name="user-email" placeholder="email@example.com">
-        <label for="user-text">Текст письма:</label>
-        <textarea rows="10" cols="45" name="free-text" placeholder="В свободной форме"></textarea>
-        <button type="submit">Отправить</button>
+    <section class="modal letter">
+      <h2 class="hidden">Задать вопрос</h2>
+      <div class="red-line"></div>
+      <button type="button" class="close-window">
+        <span class="hidden">Закрыть</span>
+      </button>
+      <form class="ask-question" method="get" action="https://echo.htmlacademy.ru">
+        <p>
+          <label for="user-name">Ваше имя:</label>
+          <input id="user-name" type="text" name="user-name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="user-email">Ваше e-mail:</label>
+          <input id="user-email" type="text" name="user-email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="user-text">Текст письма:</label>
+          <textarea id="user-text" rows="6" cols="84 name="free-text" placeholder="В свободной форме"></textarea>
+        </p>
+        <div class="button-container">
+          <button type="submit" class="red-button">Отправить</button>
+        </div>
       </form>
-      <button type="button" class="close">Закрыть</button>
     </section>
   </body>
 </html>

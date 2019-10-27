@@ -39,13 +39,13 @@
       </div>
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="">Компания</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="">Новости</a></li>
-          <li><a href="">Спецпредложения</a></li>
-          <li><a href="">Доставка</a></li>
-          <li><a href="">Контакты</a></li>
+          <li class="site-navigation-item">Главная</li>
+          <li class="site-navigation-item"><a href="">Компания</a></li>
+          <li class="site-navigation-item"><a href="catalog.html">Каталог</a></li>
+          <li class="site-navigation-item"><a href="">Новости</a></li>
+          <li class="site-navigation-item"><a href="">Спецпредложения</a></li>
+          <li class="site-navigation-item"><a href="">Доставка</a></li>
+          <li class="site-navigation-item"><a href="">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -68,30 +68,60 @@
       <div class="container-filters-and-catalog" >
         <aside class="vertical-filters">
           <span>Фильтр:</span>
-          <form>
-            <fieldset>
+          <form method="get" action="https://echo.htmlacademy.ru">
+            <fieldset class="filter-item">
               <legend>Цена:</legend>
-              <input type="range" id="price-product" name="price-product" min="0" max="30000" step="1">
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <input type="text" name="min-price" value="0">
+                  <input type="text" name="max-price" value="30000">
+                </div>
+              </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="filter-item">
               <legend>Производители:</legend>
-              <label for="bosch">BOSCH</label>
-              <input type="checkbox" id="bosch" name="bosch" checked>
-              <label for="interskol">ИНТЕРСКОЛ</label>
-              <input type="checkbox" id="interskol" name="interskol">
-              <label for="makita">MAKITA</label>
-              <input type="checkbox" id="makita" name="makita" checked>
-              <label for="dewalt">DEWALT</label>
-              <input type="checkbox" id="dewalt" name="dewalt">
-              <label for="hitachi">HITACHI</label>
-              <input type="checkbox" id="hitachi" name="hitachi">
+              <ul>
+                <li class="filter-option">
+                  <input class="hidden filter-input filter-input-checkbox" type="checkbox" id="bosch" name="bosch" checked>
+                  <label for="bosch">BOSCH</label>
+                </li>
+                <li class="filter-option">
+                  <input class="hidden filter-input filter-input-checkbox" type="checkbox" id="interskol" name="interskol">
+                  <label for="interskol">ИНТЕРСКОЛ</label>
+                </li>
+                <li class="filter-option">
+                  <input class="hidden filter-input filter-input-checkbox" type="checkbox" id="makita" name="makita" checked>
+                  <label for="makita">MAKITA</label>
+                </li>
+                <li class="filter-option">
+                  <input class="hidden filter-input filter-input-checkbox" type="checkbox" id="dewalt" name="dewalt">
+                  <label for="dewalt">DEWALT</label>
+                </li>
+                <li class="filter-option">
+                  <input class="hidden filter-input filter-input-checkbox" type="checkbox" id="hitachi" name="hitachi">
+                  <label for="hitachi">HITACHI</label>
+                </li>
+              </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="filter-item">
               <legend>Питание:</legend>
-              <label for="battery">АККУМУЛЯТОРНЫЕ</label>
-              <input type="radio" id="battery" name="bosch" checked>
-              <label for="network">СЕТЕВЫЕ</label>
-              <input type="radio" id="network" name="interskol">
+              <ul>
+                <li class="filter-option">
+                  <input class="hidden filter-input filter-input-radio" type="radio" id="battery" name="power" checked>
+                  <label for="battery">АККУМУЛЯТОРНЫЕ</label>
+                </li>
+                <li class="filter-option">
+                  <input class="hidden filter-input filter-input-radio" type="radio" id="network" name="power">
+                  <label for="network">СЕТЕВЫЕ</label>
+                </li>
+              </ul>
             </fieldset>
             <button type="submit">Показать</button>
           </form>
@@ -105,7 +135,7 @@
           </header>
           <section class="catalog">
             <ul class="catalog-items">
-              <li class="catalog-item">
+              <li class="catalog-item catalog-item-inner">
                 <span class="mark mark-new hidden">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
@@ -116,7 +146,7 @@
                 <s class="old-price">22500 Р.</s>
                 <span class="item-price">15500 Р.</span>
               </li>
-              <li class="catalog-item">
+              <li class="catalog-item catalog-item-inner">
                 <span class="mark mark-new hidden">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
@@ -127,7 +157,7 @@
                 <s class="old-price">30500 Р.</s>
                 <span class="item-price">25500 Р.</span>
               </li>
-              <li class="catalog-item">
+              <li class="catalog-item catalog-item-inner">
                 <span class="mark mark-new">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
@@ -138,7 +168,7 @@
                 <s class="old-price"></s>
                 <span class="item-price">12500 Р.</span>
               </li>
-              <li class="catalog-item">
+              <li class="catalog-item catalog-item-inner">
                 <span class="mark mark-new hidden">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
@@ -149,8 +179,8 @@
                 <s class="old-price">22500 Р.</s>
                 <span class="item-price">15500 Р.</span>
               </li>
-              <li class="catalog-item">
-                <span class="mark mark-new hidden">new</span>
+              <li class="catalog-item catalog-item-inner">
+                <span class="mark mark-new">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
                   <a href="" class="add-bookmark">В закладки</a>
@@ -160,8 +190,8 @@
                 <s class="old-price">30500 Р.</s>
                 <span class="item-price">25500 Р.</span>
               </li>
-              <li class="catalog-item">
-                <span class="mark mark-new">new</span>
+              <li class="catalog-item catalog-item-inner">
+                <span class="mark mark-new hidden">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
                   <a href="" class="add-bookmark">В закладки</a>
@@ -171,8 +201,8 @@
                 <s class="old-price"></s>
                 <span class="item-price">12500 Р.</span>
               </li>
-              <li class="catalog-item">
-                <span class="mark mark-new hidden">new</span>
+              <li class="catalog-item catalog-item-inner">
+                <span class="mark mark-new">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
                   <a href="" class="add-bookmark">В закладки</a>
@@ -182,7 +212,7 @@
                 <s class="old-price">22500 Р.</s>
                 <span class="item-price">15500 Р.</span>
               </li>
-              <li class="catalog-item">
+              <li class="catalog-item catalog-item-inner">
                 <span class="mark mark-new hidden">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
@@ -193,8 +223,8 @@
                 <s class="old-price">30500 Р.</s>
                 <span class="item-price">25500 Р.</span>
               </li>
-              <li class="catalog-item">
-                <span class="mark mark-new">new</span>
+              <li class="catalog-item catalog-item-inner">
+                <span class="mark mark-new hidden">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
                   <a href="" class="add-bookmark">В закладки</a>
@@ -304,11 +334,16 @@
       </div>
     </footer>
     <!-- скрытые элементы -->
-    <section class="add-cart" hidden>
+    <section class="modal add-cart">
+      <div class="red-line"></div>
+      <button type="button" class="close-window">
+        <span class="hidden">Закрыть</span>
+      </button>
       <p>Товар добавлен в корзину!</p>
-      <button type="button" class="close">Закрыть</button>
-      <a href="">Оформить заказ</a>
-      <a href="">Продолжить покупки</a>
+      <div class="button-container">
+        <a href="" class="red-button">Оформить заказ</a>
+        <a href="" class="red-button" >Продолжить покупки</a>
+      </div>
     </section>
   </body>
 </html>
