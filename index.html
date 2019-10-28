@@ -31,13 +31,13 @@
       </div>
   		<nav class="main-navigation">
   		  <ul class="site-navigation">
-          <li class="site-navigation-item">Главная</li>
-          <li class="site-navigation-item"><a href="">Компания</a></li>
-          <li class="site-navigation-item"><a href="catalog.html">Каталог</a></li>
-          <li class="site-navigation-item"><a href="">Новости</a></li>
-          <li class="site-navigation-item"><a href="">Спецпредложения</a></li>
-          <li class="site-navigation-item"><a href="">Доставка</a></li>
-          <li class="site-navigation-item"><a href="">Контакты</a></li>
+          <li class="current-page">Главная</li>
+          <li><a href="">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="">Новости</a></li>
+          <li><a href="">Спецпредложения</a></li>
+          <li><a href="">Доставка</a></li>
+          <li><a href="">Контакты</a></li>
         </ul>
   		</nav>
   	</header>
@@ -241,10 +241,10 @@
   	  	    Вы можете забрать товар сами,
   	  	    заехав в наш офис:
   	  	  </p>
-  	  	  <a href="">
+  	  	  <a href="" class="map-link">
   	  	  	<img src="img/small-map.jpg" width="300" height="158" alt="Местонахождение компании на карте">
   	  	  </a>
-  	  	  <a href="" class="red-button">Заблудились? Напишите нам!</a>
+  	  	  <a href="" class="red-button help-link">Заблудились? Напишите нам!</a>
   	  	</section>
   	  </section>
   	</main>
@@ -341,13 +341,99 @@
           <input id="user-email" type="text" name="user-email" placeholder="email@example.com">
         </p>
         <p>
-          <label for="user-text">Текст письма:</label>
-          <textarea id="user-text" rows="6" cols="84 name="free-text" placeholder="В свободной форме"></textarea>
+          <label for="comment">Текст письма:</label>
+          <textarea id="comment" rows="6" cols="84 name="comment" placeholder="В свободной форме"></textarea>
         </p>
         <div class="button-container">
           <button type="submit" class="red-button">Отправить</button>
         </div>
       </form>
     </section>
+  <script type="text/javascript">
+    var link = document.querySelector(".help-link");
+
+    var popup = document.querySelector(".letter");
+    var close = popup.querySelector(".close-window");
+
+    var form = popup.querySelector("form");
+    var user = popup.querySelector("[name=user-name]");
+    var email = popup.querySelector("[name=user-email]");
+    var comment = popup.querySelector("[name=comment]")
+
+    var isStorageSupport = true;
+    var storage = "";
+
+    try {
+      storage = localStorage.getItem("user-name");
+    } catch (err) {
+      isStorageSupport = false;
+    }
+
+    link.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show")
+      ;
+      if (storage) {
+        user.value = storage;
+        email.focus();
+      } else {
+        user.focus();
+      }
+    });
+
+    close.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
+    });
+
+    form.addEventListener("submit", function (evt) {
+      if (!user.value || !email.value || !comment.value) {
+        evt.preventDefault();
+        alert("Необходимо заполнить имя и электронную почту");
+        popup.classList.remove("modal-error");
+        popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add("modal-error");
+      } else {
+        if (isStorageSupport) {
+          localStorage.setItem("user-name", user.value);
+        }
+      }
+    });
+
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+        if (popup.classList.contains("modal-show")) {
+          popup.classList.remove("modal-show");
+          popup.classList.remove("modal-error");
+        }
+      }
+    });
+
+    var mapLink = document.querySelector(".map-link");
+
+    var mapPopup = document.querySelector(".map");
+    var mapClose = mapPopup.querySelector(".close-window");
+
+    mapLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      mapPopup.classList.add("modal-show");
+    });
+
+    mapClose.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      mapPopup.classList.remove("modal-show");
+    });
+
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+        if (mapPopup.classList.contains("modal-show")) {
+          evt.preventDefault();
+          mapPopup.classList.remove("modal-show");
+        }
+      }
+    });
+  </script>
   </body>
 </html>

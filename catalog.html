@@ -39,13 +39,13 @@
       </div>
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li class="site-navigation-item">Главная</li>
-          <li class="site-navigation-item"><a href="">Компания</a></li>
-          <li class="site-navigation-item"><a href="catalog.html">Каталог</a></li>
-          <li class="site-navigation-item"><a href="">Новости</a></li>
-          <li class="site-navigation-item"><a href="">Спецпредложения</a></li>
-          <li class="site-navigation-item"><a href="">Доставка</a></li>
-          <li class="site-navigation-item"><a href="">Контакты</a></li>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="">Компания</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="">Новости</a></li>
+          <li><a href="">Спецпредложения</a></li>
+          <li><a href="">Доставка</a></li>
+          <li><a href="">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -126,12 +126,31 @@
             <button type="submit">Показать</button>
           </form>
         </aside>
-        <section class="catalog">
+        <section>
           <header class="horizontal-filters">
             <span>Сортировка:</span>
-            <a href="" class="current-sort">По цене</a>
-            <a href="">По типу</a>
-            <a href="">По функционалу</a>
+            <ul class="filter-sort">
+              <li class="filter-sort-item">
+                <input class="hidden filter-sort-input" type="radio" id="by-price" name="sort" checked>
+                <label for="by-price">по цене</label>
+              </li>
+              <li class="filter-sort-item">
+                <input class="hidden filter-sort-input" type="radio" id="by-type" name="sort">
+                <label for="by-type">по типу</label>
+              </li>
+              <li class="filter-sort-item">
+                <input class="hidden filter-sort-input" type="radio" id="by-functionality" name="sort">
+                <label for="by-functionality">по функционалу</label>
+              </li>
+              <li class="filter-sort-item">
+                <input class="hidden filter-sort-input sort-dir" type="radio" id="up-dir" name="sort">
+                <label for="up-dir">1</label>
+              </li>
+              <li class="filter-sort-item">
+                <input class="hidden filter-sort-input sort-dir" type="radio" id="down-dir" name="sort">
+                <label for="down-dir">1</label>
+              </li>
+            </ul>
           </header>
           <section class="catalog">
             <ul class="catalog-items">
@@ -139,7 +158,7 @@
                 <span class="mark mark-new hidden">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
-                  <a href="" class="add-bookmark">В закладки</a>
+                  <a href="" class="add-bookmark bookmark-modal">В закладки</a>
                 </div>
                 <img src="img/hammer-drill-bosch-bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                 <h3 class="item-title">Перфоратор BOSCH BFG 3000</h3>
@@ -150,7 +169,7 @@
                 <span class="mark mark-new hidden">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
-                  <a href="" class="add-bookmark">В закладки</a>
+                  <a href="" class="add-bookmark bookmark-modal">В закладки</a>
                 </div>
                 <img src="img/hammer-drill-bosch-bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
                 <h3 class="item-title">Перфоратор BOSCH BFG 6000</h3>
@@ -161,7 +180,7 @@
                 <span class="mark mark-new">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
-                  <a href="" class="add-bookmark">В закладки</a>
+                  <a href="" class="add-bookmark bookmark-modal">В закладки</a>
                 </div>
                 <img src="img/hammer-drill-bosch-bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
                 <h3 class="item-title">Перфоратор BOSCH BFG 2000</h3>
@@ -172,7 +191,7 @@
                 <span class="mark mark-new hidden">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
-                  <a href="" class="add-bookmark">В закладки</a>
+                  <a href="" class="add-bookmark bookmark-modal">В закладки</a>
                 </div>
                 <img src="img/hammer-drill-bosch-bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                 <h3 class="item-title">Перфоратор BOSCH BFG 3000</h3>
@@ -183,7 +202,7 @@
                 <span class="mark mark-new">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
-                  <a href="" class="add-bookmark">В закладки</a>
+                  <a href="" class="add-bookmark bookmark-modal">В закладки</a>
                 </div>
                 <img src="img/hammer-drill-bosch-bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
                 <h3 class="item-title">Перфоратор BOSCH BFG 6000</h3>
@@ -194,7 +213,7 @@
                 <span class="mark mark-new hidden">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
-                  <a href="" class="add-bookmark">В закладки</a>
+                  <a href="" class="add-bookmark bookmark-modal">В закладки</a>
                 </div>
                 <img src="img/hammer-drill-bosch-bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
                 <h3 class="item-title">Перфоратор BOSCH BFG 2000</h3>
@@ -205,7 +224,7 @@
                 <span class="mark mark-new">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
-                  <a href="" class="add-bookmark">В закладки</a>
+                  <a href="" class="add-bookmark bookmark-modal">В закладки</a>
                 </div>
                 <img src="img/hammer-drill-bosch-bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
                 <h3 class="item-title">Перфоратор BOSCH BFG 3000</h3>
@@ -216,7 +235,7 @@
                 <span class="mark mark-new hidden">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
-                  <a href="" class="add-bookmark">В закладки</a>
+                  <a href="" class="add-bookmark bookmark-modal">В закладки</a>
                 </div>
                 <img src="img/hammer-drill-bosch-bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
                 <h3 class="item-title">Перфоратор BOSCH BFG 6000</h3>
@@ -227,7 +246,7 @@
                 <span class="mark mark-new hidden">new</span>
                 <div class="catalog-button">
                   <a href="" class="item-buy">Купить</a>
-                  <a href="" class="add-bookmark">В закладки</a>
+                  <a href="" class="add-bookmark bookmark-modal">В закладки</a>
                 </div>
                 <img src="img/hammer-drill-bosch-bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
                 <h3 class="item-title">Перфоратор BOSCH BFG 2000</h3>
@@ -345,5 +364,30 @@
         <a href="" class="red-button white-button" >Продолжить покупки</a>
       </div>
     </section>
+  <script type="text/javascript">
+    var addBookmark = document.querySelector(".bookmark-modal");
+
+    var cartPopup = document.querySelector(".add-cart");
+    var cartClose = cartPopup.querySelector(".close-window");
+
+    addBookmark.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      cartPopup.classList.add("modal-show");
+    });
+
+    cartClose.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      cartPopup.classList.remove("modal-show");
+    });
+
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+        if (cartPopup.classList.contains("modal-show")) {
+          evt.preventDefault();
+          cartPopup.classList.remove("modal-show");
+        }
+      }
+    });
+  </script>
   </body>
 </html>
