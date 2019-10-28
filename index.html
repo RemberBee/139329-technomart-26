@@ -89,7 +89,7 @@
             <span class="mark mark-new hidden">new</span>
             <div class="catalog-button">
               <a href="" class="item-buy">Купить</a>
-              <a href="" class="add-bookmark">В закладки</a>
+              <a href="" class="add-bookmark bookmark-modal">В закладки</a>
             </div>
             <img src="img/hammer-drill-bosch-bfg-9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
             <h3 class="item-title">Перфоратор BOSCH BFG 9000</h3>
@@ -100,7 +100,7 @@
             <span class="mark mark-new hidden">new</span>
             <div class="catalog-button">
               <a href="" class="item-buy">Купить</a>
-              <a href="" class="add-bookmark">В закладки</a>
+              <a href="" class="add-bookmark bookmark-modal">В закладки</a>
             </div>
             <img src="img/hammer-drill-bosch-bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             <h3 class="item-title">Перфоратор BOSCH BFG 3000</h3>
@@ -111,7 +111,7 @@
             <span class="mark mark-new hidden">new</span>
             <div class="catalog-button">
               <a href="" class="item-buy">Купить</a>
-              <a href="" class="add-bookmark">В закладки</a>
+              <a href="" class="add-bookmark bookmark-modal">В закладки</a>
             </div>
             <img src="img/hammer-drill-bosch-bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
             <h3 class="item-title">Перфоратор BOSCH BFG 6000</h3>
@@ -122,7 +122,7 @@
             <span class="mark mark-new">new</span>
             <div class="catalog-button">
               <a href="" class="item-buy">Купить</a>
-              <a href="" class="add-bookmark">В закладки</a>
+              <a href="" class="add-bookmark bookmark-modal">В закладки</a>
             </div>
             <img src="img/hammer-drill-bosch-bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
             <h3 class="item-title">Перфоратор BOSCH BFG 2000</h3>
@@ -431,6 +431,30 @@
         if (mapPopup.classList.contains("modal-show")) {
           evt.preventDefault();
           mapPopup.classList.remove("modal-show");
+        }
+      }
+    });
+
+    var addBookmark = document.querySelector(".bookmark-modal");
+
+    var cartPopup = document.querySelector(".add-cart");
+    var cartClose = cartPopup.querySelector(".close-window");
+
+    addBookmark.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      cartPopup.classList.add("modal-show");
+    });
+
+    cartClose.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      cartPopup.classList.remove("modal-show");
+    });
+
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+        if (cartPopup.classList.contains("modal-show")) {
+          evt.preventDefault();
+          cartPopup.classList.remove("modal-show");
         }
       }
     });

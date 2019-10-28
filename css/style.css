@@ -1811,14 +1811,48 @@ input[type="radio"].hidden {
   border-bottom: 1px solid #ee3643;
 }
 
-.sort-dir + label{
-  border: none;
+.sort-up-dir + label,
+.sort-down-dir + label {
+    position: relative;
 }
 
-.sort-dir:hover + label {
-  border: none;
+.sort-up-dir + label::before {
+  content: '';
 
-  color: #000;
+  position: absolute;
+  top: -2px;
+  left: -7px;
+
+  border: 6px solid transparent;
+  border-bottom: 10px solid rgba(0, 0, 0, 0.2);
+
+}
+
+.sort-down-dir + label::before {
+  content: '';
+
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  border: 6px solid transparent;
+  border-top: 10px solid rgba(0, 0, 0, 0.2);
+}
+
+.sort-up-dir:hover + label::before {
+  border-bottom: 10px solid #000;
+}
+
+.sort-down-dir:hover + label::before {
+  border-top: 10px solid #000;
+}
+
+.sort-up-dir:checked + label::before {
+  border-bottom: 10px solid #ee3643;
+}
+
+.sort-down-dir:checked + label::before {
+  border-top: 10px solid #ee3643;
 }
 
 .paginator-items {
