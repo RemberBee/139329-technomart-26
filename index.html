@@ -351,15 +351,15 @@
           <input id="user-email" type="text" name="user-email" placeholder="email@example.com">
         </p>
         <p>
-          <label for="comment">Текст письма:</label>
-          <textarea id="comment" rows="6" cols="84 name="comment" placeholder="В свободной форме"></textarea>
+          <label for="free-text">Текст письма:</label>
+          <textarea id="free-text" rows="6" cols="84" name="free-text" placeholder="В свободной форме"></textarea>
         </p>
         <div class="button-container">
           <button type="submit" class="red-button">Отправить</button>
         </div>
       </form>
     </section>
-  <script type="text/javascript">
+  <script>
     var link = document.querySelector(".help-link");
 
     var popup = document.querySelector(".letter");
@@ -368,7 +368,7 @@
     var form = popup.querySelector("form");
     var user = popup.querySelector("[name=user-name]");
     var email = popup.querySelector("[name=user-email]");
-    var comment = popup.querySelector("[name=comment]")
+    var comment = popup.querySelector("[name=free-text]")
 
     var isStorageSupport = true;
     var storage = "";
