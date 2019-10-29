@@ -15,7 +15,8 @@
         <span class="logo">
           <img src="img/logo-name.svg" width="109" height="19" alt="Логотоп">
         </span>
-  		  <input type="text" class="search" name="search" value="Поиск:">
+  		  <input type="text" id="search" class="search" name="search" value="Поиск:">
+        <label for="search"></label>
 		    <a href="" class="bookmark">Закладки: 0</a>
         <a href="" class="basket">Корзина: 0</a>
   		  <a href="" class="checkout">Оформить заказ</a>
@@ -56,9 +57,18 @@
 			      <a href="" class="promo-block-button">НА ВСЕ СЛУЧАИ</a>
           </div>
           <div class="promo-block-item slider">
-          	<h3>ДРЕЛИ</h3>
-          	<p>Соседям на радость</p>
-			      <a href="catalog.html" class="red-button">ОТКРЫТЬ КАТАЛОГ</a>
+            <ul class="slider-items">
+              <li>
+                <h3>ДРЕЛИ</h3>
+                <p>Соседям на радость</p>
+                <a href="catalog.html" class="red-button">ОТКРЫТЬ КАТАЛОГ</a>
+              </li>
+              <li class="hidden">
+                <h3>ПЕРФОРАТОРЫ</h3>
+                <p>Настоящие мужские игрушки</p>
+                <a href="catalog.html" class="red-button">ОТКРЫТЬ КАТАЛОГ</a>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="vertical-promo-block">
@@ -88,8 +98,8 @@
           <li class="catalog-item catalog-item-main">
             <span class="mark mark-new hidden">new</span>
             <div class="catalog-button">
-              <a href="" class="item-buy">Купить</a>
-              <a href="" class="add-bookmark bookmark-modal">В закладки</a>
+              <a href="" class="item-buy buy-modal">Купить</a>
+              <a href="" class="add-bookmark">В закладки</a>
             </div>
             <img src="img/hammer-drill-bosch-bfg-9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
             <h3 class="item-title">Перфоратор BOSCH BFG 9000</h3>
@@ -99,8 +109,8 @@
           <li class="catalog-item catalog-item-main">
             <span class="mark mark-new hidden">new</span>
             <div class="catalog-button">
-              <a href="" class="item-buy">Купить</a>
-              <a href="" class="add-bookmark bookmark-modal">В закладки</a>
+              <a href="" class="item-buy buy-modal">Купить</a>
+              <a href="" class="add-bookmark">В закладки</a>
             </div>
             <img src="img/hammer-drill-bosch-bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
             <h3 class="item-title">Перфоратор BOSCH BFG 3000</h3>
@@ -110,8 +120,8 @@
           <li class="catalog-item catalog-item-main">
             <span class="mark mark-new hidden">new</span>
             <div class="catalog-button">
-              <a href="" class="item-buy">Купить</a>
-              <a href="" class="add-bookmark bookmark-modal">В закладки</a>
+              <a href="" class="item-buy buy-modal">Купить</a>
+              <a href="" class="add-bookmark">В закладки</a>
             </div>
             <img src="img/hammer-drill-bosch-bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
             <h3 class="item-title">Перфоратор BOSCH BFG 6000</h3>
@@ -121,8 +131,8 @@
           <li class="catalog-item catalog-item-main">
             <span class="mark mark-new">new</span>
             <div class="catalog-button">
-              <a href="" class="item-buy">Купить</a>
-              <a href="" class="add-bookmark bookmark-modal">В закладки</a>
+              <a href="" class="item-buy buy-modal">Купить</a>
+              <a href="" class="add-bookmark">В закладки</a>
             </div>
             <img src="img/hammer-drill-bosch-bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
             <h3 class="item-title">Перфоратор BOSCH BFG 2000</h3>
@@ -435,15 +445,17 @@
       }
     });
 
-    var addBookmark = document.querySelector(".bookmark-modal");
+    var buyBookmark = document.getElementsByClassName("buy-modal");
 
     var cartPopup = document.querySelector(".add-cart");
     var cartClose = cartPopup.querySelector(".close-window");
 
-    addBookmark.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      cartPopup.classList.add("modal-show");
-    });
+    for (var i = 0; i < buyBookmark.length; i++) {
+      buyBookmark[i].addEventListener("click", function (evt) {
+        evt.preventDefault();
+        cartPopup.classList.add("modal-show");
+      });
+    }
 
     cartClose.addEventListener("click", function (evt) {
       evt.preventDefault();

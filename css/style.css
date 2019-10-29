@@ -131,7 +131,7 @@ input[type="radio"].hidden {
 .search {
   position: relative;
   padding-left: 50px;
-  padding-right: 61px;
+  width: 220px;
   color: #fff;
 
   border: none;
@@ -140,12 +140,12 @@ input[type="radio"].hidden {
   outline:none;
 }
 
-.search::before {
+.search + label::before {
   content: "";
 
   position: absolute;
-  top: 0px;
-  left: 20px;
+  top: 12px;
+  left: 1040px;
 
   width: 17px;
   height: 17px;
@@ -161,10 +161,19 @@ input[type="radio"].hidden {
   background-color: #212a3a;
 }
 
+.search:hover + label::before {
+  opacity: 1;
+}
+
 .search:focus {
   color: #000;
 
   background-color: #fff;
+}
+
+.search:focus + label::before {
+  background-image: url(../img/icon-search-red.svg);
+  opacity: 1;
 }
 
 .bookmark,
@@ -866,17 +875,31 @@ input[type="radio"].hidden {
   position: relative;
   width: 620px;
   height: 266px;
-  background-image: url(../img/slide-image.jpg);
 }
 
-.slider h3 {
+.slider-items {
+  padding: 0px;
+  margin: 0px;
+}
+
+.slider-items li:first-child {
+  width: 620px;
+  height: 266px;
+   background-image: url(../img/slide-image.jpg);
+}
+
+.slider-items li:last-child {
+  background-image: url(../img/slide-image2.jpg);
+}
+
+.slider-items h3 {
   margin-bottom: 0px;
 
   font-size: 36px;
   line-height: 36px;
 }
 
-.slider p {
+.slider-items p {
   margin-top: 8px;
   margin-left: 25px;
   margin-bottom: 0px;
