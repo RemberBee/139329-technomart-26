@@ -54,7 +54,7 @@
       <ul class="breadcrumbs">
         <li>
           <a href="index.html">
-            <img src="img/icon-home.svg" alt="Главная">
+            <img src="img/icon-home.svg" width="14" height="12" alt="Главная">
           </a>
         </li>
         <li>
@@ -313,16 +313,16 @@
           +7 (812) 555-05-55
         </address>
         <ul class="link-items">
-          <li class="link-item">
+          <li class="link-item link-item-color">
             <a href="">Материалы</a>
           </li>
-          <li class="link-item">
+          <li class="link-item link-item-color">
             <a href="">Техника</a>
           </li>
-          <li class="link-item">
+          <li class="link-item link-item-color">
             <a href="">Инструменты</a>
           </li>
-          <li class="link-item">
+          <li class="link-item link-item-color">
             <a href="">Спецпредложения</a>
           </li>
         </ul>
@@ -365,32 +365,6 @@
         <a href="" class="red-button white-button" >Продолжить покупки</a>
       </div>
     </section>
-  <script>
-    var buyBookmark = document.getElementsByClassName("buy-modal");
-
-    var cartPopup = document.querySelector(".add-cart");
-    var cartClose = cartPopup.querySelector(".close-window");
-
-    for (var i = 0; i < buyBookmark.length; i++) {
-      buyBookmark[i].addEventListener("click", function (evt) {
-        evt.preventDefault();
-        cartPopup.classList.add("modal-show");
-      });
-    }
-
-    cartClose.addEventListener("click", function (evt) {
-      evt.preventDefault();
-      cartPopup.classList.remove("modal-show");
-    });
-
-    window.addEventListener("keydown", function (evt) {
-      if (evt.keyCode === 27) {
-        if (cartPopup.classList.contains("modal-show")) {
-          evt.preventDefault();
-          cartPopup.classList.remove("modal-show");
-        }
-      }
-    });
-  </script>
+  <script src="js/compress.js"></script>
   </body>
 </html>

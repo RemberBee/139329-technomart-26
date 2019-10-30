@@ -608,13 +608,8 @@ input[type="radio"].hidden {
   padding: 0px;
 }
 
-.current-page {
-  padding-left: 32px;
-  padding-right: 33px;
-}
-
 .site-navigation a {
-  padding-top: 21px;
+  padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 33px;
   padding-left: 33px;
@@ -681,6 +676,10 @@ input[type="radio"].hidden {
   margin-right: 60px;
 }
 
+.link-item-color a {
+  color: #ffd180;
+}
+
 .link-item:nth-child(5) {
   margin-right: 0px;
 }
@@ -705,10 +704,6 @@ input[type="radio"].hidden {
 
 .middle-footer .link-items {
   margin: 0px;
-}
-
-.middle-footer .link-item a{
-  color: #ffd180;
 }
 
 .middle-footer .link-item:nth-child(4n) {
@@ -1134,7 +1129,7 @@ input[type="radio"].hidden {
   margin-right: 20px;
   margin-bottom: 20px;
 
-  font-family: PTSans, serif;
+  font-family: PT Sans, serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
@@ -1233,7 +1228,7 @@ input[type="radio"].hidden {
 .item-title,
 .old-price,
 .item-price {
-  font-family: PTSans, sans-serif;
+  font-family: PT Sans, sans-serif;
 }
 
 .item-title {
@@ -1343,7 +1338,7 @@ input[type="radio"].hidden {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin-bottom: 82px;
+  margin-bottom: 90px;
 
   color: #000000;
 
@@ -1376,7 +1371,7 @@ input[type="radio"].hidden {
 .service p {
   margin: 0px;
 
-  font-family: PTSans, sans-serif;
+  font-family: PT Sans, sans-serif;
   font-size: 13px;
   font-weight: normal;
   letter-spacing: 1.01;
@@ -1394,6 +1389,7 @@ input[type="radio"].hidden {
   display: -ms-flexbox;
   display: flex;
   width: 940px;
+  margin-bottom: 25px;
 }
 
 .service-controls {
@@ -1528,7 +1524,7 @@ input[type="radio"].hidden {
       -ms-flex-pack: center;
           justify-content: center;
   width: 940px;
-  margin-bottom: 83px;
+  margin-bottom: 70px;
 
   color: #000000;
 }
@@ -1538,7 +1534,7 @@ input[type="radio"].hidden {
   margin-bottom: 29px;
   height: 44px;
 
-  font-family: PTSans, serif;
+  font-family: PT Sans, serif;
   font-size: 13px;
   font-weight: normal;
 }
@@ -1641,7 +1637,7 @@ input[type="radio"].hidden {
   width: 940px;
 
   font-size: 13px;
-  font-family: PTSans, sans-serif;
+  font-family: PT Sans, sans-serif;
   line-height: 18px;
   text-transform: uppercase;
   color: #000000;
@@ -1735,7 +1731,7 @@ input[type="radio"].hidden {
 
   font-size: 13px;
   line-height: 18px;
-  font-family: PTSans, sans-serif;
+  font-family: PT Sans, sans-serif;
   text-transform: uppercase;
   color: #000000;
 
@@ -1786,7 +1782,7 @@ input[type="radio"].hidden {
 .filter-item legend {
   padding-top: 20px;
 
-  font-family: PTSans, sans-serif;
+  font-family: PT Sans, sans-serif;
   line-height: 30px;
   text-transform: uppercase;
   font-weight: 700;
@@ -1858,7 +1854,7 @@ input[type="radio"].hidden {
   padding: 8px 10px;
   margin-right: 35px;
 
-  font-family: PTSans, sans-serif;
+  font-family: PT Sans, sans-serif;
   line-height: 18px;
   text-align: center;
   color: #283136;
@@ -1890,7 +1886,7 @@ input[type="radio"].hidden {
   margin-top: 15px;
   padding: 0px;
 
-  font-family: PTSans, sans-serif;
+  font-family: PT Sans, sans-serif;
   font-size: 15px;
   line-height: 20px;
   color: #000;
@@ -1994,6 +1990,11 @@ input[type="radio"].hidden {
   opacity: 0.5;
 }
 
+.filter-input:focus + label::after,
+.filter-input:focus + label::before {
+  opacity: 0.5;
+}
+
 .filter-input:disabled + label {
   opacity: 0.2;
 }
@@ -2016,7 +2017,7 @@ input[type="radio"].hidden {
   width: 140px;
   height: 38px;
 
-  font-family: PTSans, sans-serif;
+  font-family: PT Sans, sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -2048,7 +2049,7 @@ input[type="radio"].hidden {
   height: 38px;
   margin-bottom: 21px;
 
-  font-family: PTSans, sans-serif;
+  font-family: PT Sans, sans-serif;
   color: #000000;
   font-size: 13px;
   line-height: 18px;
@@ -2156,7 +2157,7 @@ input[type="radio"].hidden {
   padding: 0px;
 
   color: #000000;
-  font-family: PTSans, sans-serif;
+  font-family: PT Sans, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -2190,7 +2191,7 @@ input[type="radio"].hidden {
   height: 100%;
 
   color: #000000;
-  font-family: PTSans, sans-serif;
+  font-family: PT Sans, sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -2263,7 +2264,7 @@ input[type="radio"].hidden {
 .description p {
   margin: 0px;
 
-  font-family: PTSans, sans-serif;
+  font-family: PT Sans, sans-serif;
   font-size: 13px;
 }
 
