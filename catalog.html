@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/script.js" data-turbolinks-track="true"></script>
   </head>
   <body>
     <header class="header">
@@ -15,8 +16,10 @@
         <a href="index.html" class="logo logo-hover-focus">
           <img src="img/logo-name.svg" width="109" height="19" alt="Логотоп">
         </a>
-        <input id="search" type="text" class="search" name="search" value="Поиск:">
-        <label for="search"></label>
+        <div class="container-search">
+          <input type="text" id="search" class="search" name="search" value="Поиск:">
+          <label for="search"></label>
+        </div>
         <a href="" class="bookmark">Закладки: 0</a>
         <a href="" class="basket add-basket">Корзина: 10</a>
         <a href="" class="checkout">Оформить заказ</a>
@@ -71,7 +74,7 @@
           <span>Фильтр:</span>
           <form method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="filter-item">
-              <legend>Цена:</legend>
+              <legend class="legend">Цена:</legend>
               <div class="range-filter">
                 <div class="range-controls">
                   <div class="scale">
@@ -144,11 +147,11 @@
                 <label for="by-functionality">по функционалу</label>
               </li>
               <li class="filter-sort-item">
-                <input class="hidden filter-sort-input sort-up-dir" type="radio" id="up-dir" name="sort">
+                <input class="hidden sort-up-dir" type="radio" id="up-dir" name="sort">
                 <label for="up-dir"></label>
               </li>
               <li class="filter-sort-item">
-                <input class="hidden filter-sort-input sort-down-dir" type="radio" id="down-dir" name="sort">
+                <input class="hidden sort-down-dir" type="radio" id="down-dir" name="sort">
                 <label for="down-dir"></label>
               </li>
             </ul>
@@ -365,6 +368,8 @@
         <a href="" class="red-button white-button" >Продолжить покупки</a>
       </div>
     </section>
-  <script src="js/compress.js"></script>
+  <script>
+    catalog();
+  </script>
   </body>
 </html>

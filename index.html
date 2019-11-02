@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/script.js" data-turbolinks-track="true"></script>
   </head>
   <body>
     <header class="header">
@@ -15,8 +16,10 @@
         <span class="logo">
           <img src="img/logo-name.svg" width="109" height="19" alt="Логотоп">
         </span>
-        <input type="text" id="search" class="search" name="search" value="Поиск:">
-        <label for="search"></label>
+        <div class="container-search">
+          <input type="text" id="search" class="search" name="search" value="Поиск:">
+          <label for="search"></label>
+        </div>
         <a href="" class="bookmark">Закладки: 0</a>
         <a href="" class="basket">Корзина: 0</a>
         <a href="" class="checkout">Оформить заказ</a>
@@ -359,6 +362,20 @@
         </div>
       </form>
     </section>
-  <script src="js/compress.js"></script>
+    <section class="modal add-cart">
+      <div class="red-line"></div>
+      <button type="button" class="close-window">
+        <span class="hidden">Закрыть</span>
+      </button>
+      <p>Товар добавлен в корзину!</p>
+      <div class="button-container">
+        <a href="" class="red-button">Оформить заказ</a>
+        <a href="" class="red-button white-button" >Продолжить покупки</a>
+      </div>
+    </section>
+  <script>
+    index();
+    catalog();
+  </script>
   </body>
 </html>
