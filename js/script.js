@@ -1,4 +1,29 @@
-    function index() {
+      var buyBookmark = document.getElementsByClassName("buy-modal");
+
+      var cartPopup = document.querySelector(".add-cart");
+      var cartClose = cartPopup.querySelector(".close-window");
+
+      for (var i = 0; i < buyBookmark.length; i++) {
+        buyBookmark[i].addEventListener("click", function (evt) {
+          evt.preventDefault();
+          cartPopup.classList.add("modal-show");
+        });
+      }
+
+      cartClose.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        cartPopup.classList.remove("modal-show");
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          if (cartPopup.classList.contains("modal-show")) {
+            evt.preventDefault();
+            cartPopup.classList.remove("modal-show");
+          }
+        }
+      });
+
       var link = document.querySelector(".help-link");
 
       var popup = document.querySelector(".letter");
@@ -82,32 +107,3 @@
           }
         }
       });
-    }
-
-    function catalog() {
-      var buyBookmark = document.getElementsByClassName("buy-modal");
-
-      var cartPopup = document.querySelector(".add-cart");
-      var cartClose = cartPopup.querySelector(".close-window");
-
-      for (var i = 0; i < buyBookmark.length; i++) {
-        buyBookmark[i].addEventListener("click", function (evt) {
-          evt.preventDefault();
-          cartPopup.classList.add("modal-show");
-        });
-      }
-
-      cartClose.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        cartPopup.classList.remove("modal-show");
-      });
-
-      window.addEventListener("keydown", function (evt) {
-        if (evt.keyCode === 27) {
-          if (cartPopup.classList.contains("modal-show")) {
-            evt.preventDefault();
-            cartPopup.classList.remove("modal-show");
-          }
-        }
-      });
-    }
